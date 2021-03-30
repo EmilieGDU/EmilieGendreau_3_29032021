@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+    <!-- TITLE -->    
+		<title>Ohmyfood!</title>
+
+    <!-- METAS -->
+    <!-- Encodage de la page -->    
+		<meta charset="utf-8" />
+    <!-- Description pour les moteurs de recherche -->
+        <meta name="description" content="Ohmyfood! Réservation de menus de restaurants gastronomiques." />
+	<!-- Configuration du viewport pour les navigateurs mobiles -->	
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph data -->
+        <meta property="og:title" content="Ohmyfood!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://emiliegdu.github.io/EmilieGendreau_3_29032021/#" />
+        <meta property="og:image" content="https://EmilieGDU.github.io/EmilieGendreau_3_29032021/images/logo/ohmyfood.png" />
+        <meta property="og:description" content="Finis les temps d'attente au restaurant! Grâce à notre service 100% en ligne, vous pourrez : sélectionner le restaurant gastronomique de votre choix, composer votre menu et réserver un créneau de dégustation pour que vos plats soient prêts à votre arrivée." />
+		
+    <!-- LINKS -->
+    <!-- Lien vers la feuille de style CSS -->    
+        <link rel="stylesheet" href="style.css" />
+    <!-- Liens vers les polices Shrikhand et Roboto de Google Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- Code de kit CDNJS pour la bibliothèque Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    </head>
+
+	<body>
+    <!-- HEADER -->
+		<header class="header">
+            <h1 class="header__logo">ohmyfood</h1>
+        </header>
+
+    <!-- CORPS DE PAGE -->
+        <!-- EMPLACEMENT DU RESTAURANT RECHERCHE -->
+        <div class="restaurant-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="search" placeholder="Paris, Belleville" />
+        </div>
+
+        <!-- PRESENTATION DE L'ENTREPRISE -->
+        <section class="company-presentation">
+            <article class="explore-restaurants">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="explore-restaurants__button" type="button">Explorer nos restaurants</button>
+            </article>
+
+            <aside class="site-operation">
+                <h2>Fonctionnement</h2>
+                <ol>
+                    <li><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</li>
+                    <li><i class="fas fa-list-ul"></i> Composez votre menu</li>
+                    <li><i class="fas fa-store"></i> Dégustez au restaurant</li>
+                </ol>
+            </aside>
+        </section>
+        
+        <!-- RESTAURANTS SUGGERES -->
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="container">
+                <!-- Cartes restaurants -->
+                <article class="restaurant-preview">
+                    <div class="restaurant-preview__image">
+                        <img src="images/restaurants/1_Palette_Gout.jpg" alt="Photograph of a dish prepared by the restaurant 'La palette du goût'" />
+                    </div>                    
+                    <div  class="restaurant-preview__description">
+                        <div>
+                            <h3 class="restaurant-preview__heading">La palette du goût</h3>
+                            <p class="restaurant-preview__byline">Ménilmontant</p>
+                        </div>
+                        <div>
+                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="restaurant-preview">
+                    <div class="restaurant-preview__image">
+                        <img src="images/restaurants/2_Note_Enchantee.jpg" alt="Photograph of a dish prepared by the restaurant 'La note enchantée'" />
+                    </div>                    
+                    <div  class="restaurant-preview__description">
+                        <div>
+                            <h3 class="restaurant-preview__heading">La note enchantée</h3>
+                            <p class="restaurant-preview__byline">Charonne</p>
+                        </div>
+                        <div>
+                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                        </div>
+                    </div>
+                </article>  
+
+                <article class="restaurant-preview">
+                    <div class="restaurant-preview__image">
+                        <img src="images/restaurants/3_A_La_Francaise.jpg" alt="Photograph of a dish prepared by the restaurant 'A la française' />
+                    </div>                    
+                    <div  class="restaurant-preview__description">
+                        <div>
+                            <h3 class="restaurant-preview__heading">A la française</h3>
+                            <p class="restaurant-preview__byline">Cité Rouge</p>
+                        </div>
+                        <div>
+                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                        </div>
+                    </div>
+                </article>  
+
+                <article class="restaurant-preview">
+                    <div class="restaurant-preview__image">
+                        <img src="images/restaurants/4_Delice_Sens.jpg" alt="Photograph of a dish prepared by the restaurant 'Le délice des sens'" />
+                    </div>                    
+                    <div  class="restaurant-preview__description">
+                        <div>
+                            <h3 class="restaurant-preview__heading">Le délice des sens</h3>
+                            <p class="restaurant-preview__byline">Folie-Méricourt</p>
+                        </div>
+                        <div>
+                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                        </div>
+                    </div>
+                </article> 
+            </div> 
+        </section>
+
+    <!-- FOOTER --> 
+        <footer class="footer">
+            <h4 class="footer__logo">ohmyfood</h4>
+            <ul>
+                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
+	</body>
+
+</html>
