@@ -1,0 +1,59 @@
+/* Polices */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__logo, .footer__logo {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* Couleurs */
+.site-operation .fas {
+    color: #9356DC;
+}
+
+
+/* Champ de recherche */
+.restaurant-location {
+    background-color: #F2F2F2;
+    border-top: 1px solid gray;
+}
+
+/* Bouton de recherche */
+.explore-restaurants__button {
+    border-radius: 45px;
+    padding: 10px;
+    color: #FFFFFF;
+    background-color: #FF79DA;
+}
+
+/* Cartes restaurants */
+.restaurant-preview {
+    border-radius: 15px;
+}
+
+.restaurant-preview__image {
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+}
+
+.restaurant-preview__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-preview__heading {
+    font-size: ; 
+    padding-left: ; 
+    margin: ;
+    line-height: ;
+}
+
+.restaurant-preview__byline {
+
+}
+
+.restaurant-preview__favorite {
+
+}
