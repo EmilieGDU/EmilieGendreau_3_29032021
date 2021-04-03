@@ -21,7 +21,7 @@
 		
     <!-- LINKS -->
     <!-- Lien vers la feuille de style CSS -->    
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/style.css" />
     <!-- Liens vers les polices Shrikhand et Roboto de Google Fonts -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
@@ -40,103 +40,130 @@
     <!-- CORPS DE PAGE -->
         <!-- EMPLACEMENT DU RESTAURANT RECHERCHE -->
         <div class="restaurant-location">
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="search" placeholder="Paris, Belleville" />
+            <i class="restaurant-location__icon fas fa-map-marker-alt"></i>
+            <input class="restaurant-location__input" type="search" placeholder="Paris, Belleville" />
         </div>
 
-        <!-- PRESENTATION DE L'ENTREPRISE -->
-        <section class="company-presentation">
-            <article class="explore-restaurants">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="explore-restaurants__button" type="button">Explorer nos restaurants</button>
-            </article>
-
-            <aside class="site-operation">
-                <h2>Fonctionnement</h2>
-                <ol>
-                    <li><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</li>
-                    <li><i class="fas fa-list-ul"></i> Composez votre menu</li>
-                    <li><i class="fas fa-store"></i> Dégustez au restaurant</li>
-                </ol>
-            </aside>
-        </section>
-        
-        <!-- RESTAURANTS SUGGERES -->
-        <section class="restaurants">
-            <h2>Restaurants</h2>
-            <div class="container">
-                <!-- Cartes restaurants -->
-                <article class="restaurant-preview">
-                    <div class="restaurant-preview__image">
-                        <img src="images/restaurants/1_Palette_Gout.jpg" alt="Photograph of a dish prepared by the restaurant 'La palette du goût'" />
-                    </div>                    
-                    <div  class="restaurant-preview__description">
-                        <div>
-                            <h3 class="restaurant-preview__heading">La palette du goût</h3>
-                            <p class="restaurant-preview__byline">Ménilmontant</p>
-                        </div>
-                        <div>
-                            <i class="far fa-heart restaurant-preview__favorite"></i>
-                        </div>
-                    </div>
+        <!-- CONTENU PRINCIPAL DE LA PAGE -->
+        <main class="main-content">
+            <!-- PRESENTATION DE L'ENTREPRISE -->
+            <section class="company-presentation">
+                <!-- Exploration des restaurants -->
+                <article class="explore-restaurants">
+                    <h2 class="main-content__heading explore-restaurants__heading">Réservez le menu qui vous convient</h2>
+                    <p class="explore-restaurants__byline">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <button class="explore-restaurants__button" type="button">Explorer nos restaurants</button>
                 </article>
-                
-                <article class="restaurant-preview">
-                    <div class="restaurant-preview__image">
-                        <img src="images/restaurants/2_Note_Enchantee.jpg" alt="Photograph of a dish prepared by the restaurant 'La note enchantée'" />
-                    </div>                    
-                    <div  class="restaurant-preview__description">
-                        <div>
-                            <h3 class="restaurant-preview__heading">La note enchantée</h3>
-                            <p class="restaurant-preview__byline">Charonne</p>
-                        </div>
-                        <div>
-                            <i class="far fa-heart restaurant-preview__favorite"></i>
-                        </div>
-                    </div>
-                </article>  
 
-                <article class="restaurant-preview">
-                    <div class="restaurant-preview__image">
-                        <img src="images/restaurants/3_A_La_Francaise.jpg" alt="Photograph of a dish prepared by the restaurant 'A la française' />
-                    </div>                    
-                    <div  class="restaurant-preview__description">
+                <!-- Fonctionnement du site -->
+                <aside class="site-operation">
+                    <h2 class="main-content__heading site-operation__heading">Fonctionnement</h2>
+                    <ul class="site-operation__list">
+                        <li class="site-operation__list-item">
+                            <span class="site-operation__list-item__number">1</span>
+                            <i class="site-operation__list-item__icon fas fa-mobile-alt"></i>
+                            <span class="site-operation__list-item__text">Choisissez un restaurant</span>
+                        </li>
+                        <li class="site-operation__list-item">
+                            <span class="site-operation__list-item__number">2</span>
+                            <i class="site-operation__list-item__icon fas fa-list-ul"></i>
+                            <span class="site-operation__list-item__text">Composez votre menu</span>
+                        </li>
+                        <li class="site-operation__list-item site-operation__list-item--active ">
+                            <span class="site-operation__list-item__number">3</span> 
+                            <i class="site-operation__list-item__icon fas fa-store"></i>
+                            <span class="site-operation__list-item__text">Dégustez au restaurant</span>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            
+            <!-- RESTAURANTS SUGGERES -->
+            <section class="restaurants">
+                <h2 class="main-content__heading">Restaurants</h2>
+                <div class="container">
+                    <!-- Cartes restaurants -->
+                    <article class="restaurant-preview">
                         <div>
-                            <h3 class="restaurant-preview__heading">A la française</h3>
-                            <p class="restaurant-preview__byline">Cité Rouge</p>
+                            <img class="restaurant-preview__image" src="images/restaurants/1_Palette_Gout.jpg" alt="Photograph of a dish prepared by the restaurant 'La palette du goût'" />
+                        </div>                    
+                        <div  class="restaurant-preview__description">
+                            <div>
+                                <h3 class="restaurant-preview__heading">La palette du goût</h3>
+                                <p class="restaurant-preview__byline">Ménilmontant</p>
+                            </div>
+                            <div>
+                                <i class="far fa-heart restaurant-preview__favorite"></i>
+                            </div>
                         </div>
+                    </article>
+                    
+                    <article class="restaurant-preview">
                         <div>
-                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                            <img class="restaurant-preview__image restaurant-preview__image--portrait" src="images/restaurants/2_Note_Enchantee.jpg" alt="Photograph of a dish prepared by the restaurant 'La note enchantée'" />
+                        </div>                    
+                        <div class="restaurant-preview__description">
+                            <div>
+                                <h3 class="restaurant-preview__heading">La note enchantée</h3>
+                                <p class="restaurant-preview__byline">Charonne</p>
+                            </div>
+                            <div>
+                                <i class="far fa-heart restaurant-preview__favorite"></i>
+                            </div>
                         </div>
-                    </div>
-                </article>  
+                    </article>  
 
-                <article class="restaurant-preview">
-                    <div class="restaurant-preview__image">
-                        <img src="images/restaurants/4_Delice_Sens.jpg" alt="Photograph of a dish prepared by the restaurant 'Le délice des sens'" />
-                    </div>                    
-                    <div  class="restaurant-preview__description">
+                    <article class="restaurant-preview">
                         <div>
-                            <h3 class="restaurant-preview__heading">Le délice des sens</h3>
-                            <p class="restaurant-preview__byline">Folie-Méricourt</p>
+                            <img class="restaurant-preview__image" src="images/restaurants/3_A_La_Francaise.jpg" alt="Photograph of a dish prepared by the restaurant 'A la française'" />
                         </div>
+                        <div class="restaurant-preview__description">                    
+                            <div>
+                                <h3 class="restaurant-preview__heading">A la française</h3>
+                                <p class="restaurant-preview__byline">Cité Rouge</p>
+                            </div>
+                            <div>
+                                <i class="far fa-heart restaurant-preview__favorite"></i>
+                            </div>
+                        </div>
+                    </article>  
+
+                    <article class="restaurant-preview">
                         <div>
-                            <i class="far fa-heart restaurant-preview__favorite"></i>
+                            <img class="restaurant-preview__image" src="images/restaurants/4_Delice_Sens.jpg" alt="Photograph of a dish prepared by the restaurant 'Le délice des sens'" />
+                        </div>                    
+                        <div  class="restaurant-preview__description">
+                            <div>
+                                <h3 class="restaurant-preview__heading">Le délice des sens</h3>
+                                <p class="restaurant-preview__byline">Folie-Méricourt</p>
+                            </div>
+                            <div>
+                                <i class="far fa-heart restaurant-preview__favorite"></i>
+                            </div>
                         </div>
-                    </div>
-                </article> 
-            </div> 
-        </section>
+                    </article> 
+                </div> 
+            </section>
+        </main>
 
     <!-- FOOTER --> 
         <footer class="footer">
             <h4 class="footer__logo">ohmyfood</h4>
-            <ul>
-                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+            <ul class="footer__list">
+                <li class="footer__list-item footer__list--with-icon">
+                    <i class="footer__list-item__icon fas fa-utensils"></i> 
+                    <span class="footer__list-item__text">Proposer un restaurant</span>
+                </li>
+                <li class="footer__list-item footer__list--with-icon">
+                    <i class="footer__list-item__icon fas fa-hands-helping"></i> 
+                    <span class="footer__list-item__text">Devenir partenaire</span>
+                </li>
+                <li class="footer__list-item footer__list--without-icon">
+                    Mentions légales
+                </li>
+                <li class="footer__list-item footer__list--without-icon">
+                    Contact
+                </li>
             </ul>
         </footer>
 	</body>
