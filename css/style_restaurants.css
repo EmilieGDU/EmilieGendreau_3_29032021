@@ -1,0 +1,103 @@
+/* =============================================================================== */
+/*                                   GENERALITES                                   */
+/* =============================================================================== */
+
+/* Mesures */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Polices */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__logo, .footer__logo {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* Couleurs */
+.site-operation .fas {
+    color: #9356DC;
+}
+
+
+/* =============================================================================== */
+/*                                    SPECIFIQUE                                   */
+/* =============================================================================== */
+
+/* HEADER */
+.header {
+    width: 100%;
+}
+
+.header__container {   
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin-left: 5.5%;
+    padding: 15px 0px 10px 0px;
+}
+
+.header__button {
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+.header__logo {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 53vw;
+    background-color: #353535;
+    color: #FFFFFF;
+    padding-left: 7vw;
+}
+
+.footer__logo {
+    font-size: 1.15rem;
+    font-weight: 300;
+    padding: 20px 0px 5px 0px;
+}
+
+.footer__list {
+    width: 90%;
+    margin: 0;
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+.footer__list--with-icon {
+    font-weight: 400;
+}
+
+.footer__list--without-icon {
+    font-weight: 300;
+}
+
+.footer__list-item {
+    position: relative;
+    padding-top: 10px;
+    font-size: 0.95rem;
+}
+
+.footer__list-item__icon {
+    font-size: 0.8rem;
+}
+
+.footer__list-item__icon.fa-hands-helping {
+    font-size: 0.65rem;
+} 
+
+.footer__list-item__text {
+    position: absolute;
+    left: 20px;
+}
