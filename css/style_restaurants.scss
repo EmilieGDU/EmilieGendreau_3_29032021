@@ -1,3 +1,25 @@
+/* =============================================================================== */
+/*                                   GENERALITES                                   */
+/* =============================================================================== */
+
+/* Couleurs */
+$color-primary: #9356DC ;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0; 
+$color-shadow: #E9E9E9;
+
+/* Tailles */
+$box-shadow-size: 5px;
+
+/* Mixins */
+@mixin box-shadow ($shadow-size: $box-shadow-size, $color: $color-shadow) {
+    box-shadow: $box-shadow-size $box-shadow-size $box-shadow-size $color;
+}
+
+/* =============================================================================== */
+/*                                    SPECIFIQUE                                   */
+/* =============================================================================== */
+
 /* HEADER */
 .header {
     width: 100%;
