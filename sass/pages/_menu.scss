@@ -1,0 +1,68 @@
+.restaurant-menu {
+    &__article {
+    /* border: 1px solid teal; */
+    margin: 10.87% 3.2% 0 3.2%;
+    }
+    &__dish-category {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1rem;
+        padding-left: 1.33%;
+    }
+    &__separator { 
+        border: none;   
+        border-top: 3px solid #99E2D0;
+        width: 10.87%;
+        margin-top: 8px;
+        margin-left: 1.33%;
+    }
+    &__item {
+        /* border: 1px solid orange; */
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-radius: 10px;
+        margin-top: 4%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        box-shadow: 2.5px 5px 7.5px #909090;
+        &__description {
+            padding-left: 10px;
+        }
+        &__title {
+            /* background-color: lightgreen; */
+            font-size: 1rem;
+        }
+        &__byline {
+            /* background-color: lightsalmon; */
+            font-size: 0.9rem;
+            font-weight: 300;
+            padding-top: 10px;
+        }
+        &__price {
+            /* background-color: lightslategray; */
+            padding-right: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    }
+    &__order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 48.91%;
+        height: 50px;
+        margin: 13.04% auto 21.74% auto;
+        font-size: 0.9rem;
+        /* Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
+        border: none;
+        border-radius: 45px;
+        padding: 10px; // 2.66%
+        color: #FFFFFF;
+        background-color: #DD6EDB;
+        font-weight: 600;
+        */
+    }
+}

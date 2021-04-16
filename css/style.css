@@ -1,290 +1,374 @@
-/* =============================================================================== */
-/*                                   GENERALITES                                   */
-/* =============================================================================== */
-
-/* Mesures */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Polices */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.header__logo, .footer__logo {
-    font-family: 'Shrikhand', cursive;
-}
-
+@charset "UTF-8";
+/* ORDRE D'IMPORT :
+1 - Utils ;
+2 - Vendors ;
+3 - Base ;
+4 - Components ;
+5 - Layout ;
+6 - Pages ;
+7 - Themes 
+*/
 /* Couleurs */
-.site-operation .fas {
-    color: #9356DC;
+/* Tailles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
 
-/* =============================================================================== */
-/*                                    SPECIFIQUE                                   */
-/* =============================================================================== */
+.header__logo, .restaurant__description__heading, .footer__logo {
+  font-family: "Shrikhand", cursive;
+}
 
-/* HEADER */
+.button_pink {
+  border: none;
+  border-radius: 45px;
+  padding: 10px;
+  color: #FFFFFF;
+  background-color: #DD6EDB;
+  font-weight: 600;
+}
+
+.header {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+  margin-left: 5.5%;
+  padding: 15px 0px 10px 0px;
+}
+.header__button {
+  border: none;
+  background-color: #FFFFFF;
+  font-size: 1.3rem;
+}
 .header__logo {
-    text-align: center;
-    padding: 10px 0px;
-    font-size: 1.8rem;
-    font-weight: 400;
+  text-align: center;
+  /* text-align et padding non présents sur mise en page spécifique des restaurants */
+  padding: 10px 0px;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
+.footer {
+  width: 100%;
+  height: 53vw;
+  background-color: #353535;
+  /* #353535 */
+  color: #FFFFFF;
+  /* Tenter fonction if lightness < X then color = #FFFFFF */
+  padding-left: 7vw;
+  /* 7% */
+}
+.footer__logo {
+  font-size: 1.15rem;
+  font-weight: 300;
+  padding: 20px 0px 5px 0px;
+}
+.footer__list {
+  width: 90%;
+  margin: 0;
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+.footer__list--with-icon {
+  font-weight: 400;
+}
+.footer__list--without-icon {
+  font-weight: 300;
+}
+.footer__list-item {
+  position: relative;
+  padding-top: 10px;
+  /* 2.67% */
+  font-size: 0.95rem;
+}
+.footer__list-item__icon {
+  font-size: 0.8rem;
+}
+.footer__list-item__icon.fa-hands-helping {
+  font-size: 0.65rem;
+}
+.footer__list-item__text {
+  position: absolute;
+  left: 20px;
+  /* 5.33% */
+}
 
-/* CORPS DE PAGE */
-
-/* Emplacement du restaurant recherché */
 .restaurant-location {
-    background-color: #EAEAEA;
-    box-shadow: 0px 3px 3px #D5D5D5 inset;
-    padding: 15px 0px;
+  background-color: #EAEAEA;
+  box-shadow: 0px 3px 3px #D5D5D5 inset;
+  padding: 15px 0px;
+  /*text-align: center;*/
 }
-
 .restaurant-location__container {
-    text-align: center;
+  text-align: center;
 }
-
 .restaurant-location__icon {
-    padding-right: 10px;
+  padding-right: 10px;
 }
-
 .restaurant-location__input {
-    width: 125px;
-    border: none;
-    background-color: #EAEAEA;
-    font-weight: 700;
-    font-size: 0.9rem;
+  width: 125px;
+  border: none;
+  background-color: #EAEAEA;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
-
 .restaurant-location__input::placeholder {
-    color: #000000;
-    opacity: 1;
+  color: #000000;
+  opacity: 1;
 }
 
-/* CONTENU PRINCIPAL DE LA PAGE */
 .main-content {
-    width: 100vw;
-    /* margin: auto; */
+  width: 100vw;
+  /* margin: auto; */
 }
-
 .main-content__heading {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-/* PRESENTATION DE L'ENTREPRISE */
-
-/* Exploration des restaurants */
 .explore-restaurants {
-    background-color: #F6F6F6;
-    text-align: center;
-    padding-bottom: 55px;
+  background-color: #F6F6F6;
+  text-align: center;
+  padding-bottom: 55px;
 }
-
 .explore-restaurants__heading {
-    padding-left: 60px;
-    padding-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
-
 .explore-restaurants__byline {
-    padding: 10px 20px 30px 20px;
-    font-weight: 300;
+  padding: 10px 20px 30px 20px;
+  font-weight: 300;
 }
-
 .explore-restaurants__button {
-    width: 215px;
-    height: 50px;
-    border: none;
-    border-radius: 45px;
-    padding: 10px;
-    color: #FFFFFF;
-    background-color: #DD6EDB;
-    font-weight: 600;
-    font-size: 0.9rem;
+  width: 215px;
+  height: 50px;
+  font-size: 0.9rem;
+  /* Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
+  border: none;
+  border-radius: 45px;
+  padding: 10px;
+  color: #FFFFFF;
+  background-color: #DD6EDB;
+  font-weight: 600;*/
 }
 
-
-/* Fonctionnement du site */
 .site-operation {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
-
 .site-operation__heading {
-    padding-left: 5%;
+  padding-left: 5%;
 }
-
 .site-operation__list {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 .site-operation__list-item {
-    position: relative;
-    background-color: #F6F6F6;
-    border-radius: 15px;
-    box-shadow: 2.5px 5px 5px #E9E9E9;
-    padding: 28px 20px;
-    width: 90%;
-    height: 75px;
-    margin: 7% 0% 0% 5%;
-    font-size: 0.9rem;
-    font-weight: 500;
+  position: relative;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #E9E9E9;
+  padding: 28px 20px;
+  width: 90%;
+  height: 75px;
+  margin: 7% 0% 0% 5%;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
 .site-operation__list-item--active {
-    background-color:  #F5EDFF;
+  background-color: #F5EDFF;
 }
-
 .site-operation__list-item__number {
-    position: absolute;
-    left: -2.5%;
-    color: #FFFFFF;
-    border: 1px solid #9356DC;
-    border-radius: 15px;
-    padding: 0px 5px;
-    background-color: #9356DC;
-    font-size: 0.9rem;
+  position: absolute;
+  left: -2.5%;
+  color: #FFFFFF;
+  border: 1px solid #9356DC;
+  border-radius: 15px;
+  padding: 0px 5px;
+  background-color: #9356DC;
+  font-size: 0.9rem;
 }
-
 .site-operation__list-item__icon {
-    padding: 0px 15px;
-    font-size: 1rem;
-    font-weight: 400;
+  padding: 0px 15px;
+  font-size: 1rem;
+  font-weight: 400;
 }
-
-.site-operation__list-item__icon.fas.fa-mobile-alt, .site-operation__list-item__icon.fas.fa-list-ul {
-    color: #7E7E7E;
-    font-size: 1.1rem;
+.site-operation__list-item__icon.fas {
+  color: #9356DC;
 }
-
+.site-operation__list-item__icon.fas.fa-mobile-alt, .site-operation__list-item__icon .fas.fa-list-ul {
+  color: #7E7E7E;
+  font-size: 1.1rem;
+}
 .site-operation__list-item__text {
-    position: absolute;
-    left: 70px;
-    font-size: 1rem;
+  position: absolute;
+  left: 70px;
+  font-size: 1rem;
 }
-
-/* RESTAURANTS SUGGERES */
 
 .restaurants {
-    background-color: #F2F2F2;
-    padding-bottom: 17vw;
+  background-color: #F2F2F2;
+  padding-bottom: 17vw;
 }
-
 .restaurants__heading {
-    padding-left: 5%;
+  padding-left: 5%;
 }
 
 .restaurant-preview {
-    /* border: 1px solid green; */
-    position: relative;
-    width: 90%;
-    margin: 5% 5% 0% 5%;
-    border-radius: 15px;
-    box-shadow: 2.5px 5px 5px #E6E6E6;
+  /* border: 1px solid green; */
+  position: relative;
+  width: 90%;
+  margin: 5% 5% 0% 5%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #E9E9E9;
 }
-
 .restaurant-preview__image {
-    border-radius: 15px 15px 0px 0px;
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    object-position: 50% 100%;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  object-position: 50% 100%;
 }
-
-.restaurant-preview__image--portrait{
-    object-position: 50% 62%;
+.restaurant-preview__image--portrait {
+  object-position: 50% 62%;
 }
-
 .restaurant-preview__new {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    height: 30px;
-    width: 21vw;
-    background-color: #99E2D0;
-    border-radius: 2.5px;
-    color: #179576;
-    text-align: center;
-    padding-top: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  height: 30px;
+  width: 21vw;
+  background-color: #99E2D0;
+  border-radius: 2.5px;
+  color: #179576;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
 .restaurant-preview__description {
-    /* border: 2px solid red; */
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px 10px 10px;
+  /* border: 2px solid red; */
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 10px 10px;
 }
-
 .restaurant-preview__heading {
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding-bottom: 3px; 
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 3px;
 }
-
 .restaurant-preview__byline {
-    font-size: 1.05rem;
-    font-weight: 300;
+  font-size: 1.05rem;
+  font-weight: 300;
 }
-
 .restaurant-preview__favorite {
-    font-size: 1.5rem;
-    font-weight: 100;
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 
-
-/* FOOTER */
-.footer {
-    width: 100%;
-    height: 53vw;
-    background-color: #353535;
-    color: #FFFFFF;
-    padding-left: 7vw;
+.restaurant {
+  position: relative;
+  width: 100%;
+  height: 315px;
+}
+.restaurant__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.restaurant__description {
+  position: absolute;
+  width: 100%;
+  background-color: #FFFFFF;
+  bottom: 0;
+  border-radius: 30px 30px 0px 0px;
+}
+.restaurant__description__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 85.87%;
+  font-size: 1.2rem;
+  margin: 0 auto 0 4.35%;
+  padding: 11.96% 0 0 0;
+}
+.restaurant__description__favorite {
+  font-size: 1.5rem;
 }
 
-.footer__logo {
-    font-size: 1.15rem;
-    font-weight: 300;
-    padding: 20px 0px 5px 0px;
+.restaurant-menu__article {
+  /* border: 1px solid teal; */
+  margin: 10.87% 3.2% 0 3.2%;
+}
+.restaurant-menu__dish-category {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-left: 1.33%;
+}
+.restaurant-menu__separator {
+  border: none;
+  border-top: 3px solid #99E2D0;
+  width: 10.87%;
+  margin-top: 8px;
+  margin-left: 1.33%;
+}
+.restaurant-menu__item {
+  /* border: 1px solid orange; */
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 10px;
+  margin-top: 4%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 2.5px 5px 7.5px #909090;
+}
+.restaurant-menu__item__description {
+  padding-left: 10px;
+}
+.restaurant-menu__item__title {
+  /* background-color: lightgreen; */
+  font-size: 1rem;
+}
+.restaurant-menu__item__byline {
+  /* background-color: lightsalmon; */
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-top: 10px;
+}
+.restaurant-menu__item__price {
+  /* background-color: lightslategray; */
+  padding-right: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.restaurant-menu__order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 48.91%;
+  height: 50px;
+  margin: 13.04% auto 21.74% auto;
+  font-size: 0.9rem;
+  /* Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
+  border: none;
+  border-radius: 45px;
+  padding: 10px; // 2.66%
+  color: #FFFFFF;
+  background-color: #DD6EDB;
+  font-weight: 600;
+  */
 }
 
-.footer__list {
-    width: 90%;
-    margin: 0;
-    list-style-type: none;
-    padding-bottom: 30px;
-}
-
-.footer__list--with-icon {
-    font-weight: 400;
-}
-
-.footer__list--without-icon {
-    font-weight: 300;
-}
-
-.footer__list-item {
-    position: relative;
-    padding-top: 10px;
-    font-size: 0.95rem;
-}
-
-.footer__list-item__icon {
-    font-size: 0.8rem;
-}
-
-.footer__list-item__icon.fa-hands-helping {
-    font-size: 0.65rem;
-} 
-
-.footer__list-item__text {
-    position: absolute;
-    left: 20px;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+/* ORDRE D'IMPORT :
+1 - Utils ;
+2 - Vendors ;
+3 - Base ;
+4 - Components ;
+5 - Layout ;
+6 - Pages ;
+7 - Themes 
+*/
+
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/sizing";
+@import "./base/typography";
+
+@import "./components/button";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/location";
+@import "./pages/main-content";
+@import "./pages/explore";
+@import "./pages/operation";
+@import "./pages/suggested-restaurants";
+@import "./pages/restaurant-preview";
+@import "./pages/restaurant";
+@import "./pages/menu";

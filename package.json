@@ -1,0 +1,19 @@
+{
+  "name": "emiliegendreau_3_29032021",
+  "version": "1.0.0",
+  "description": "*** Parcours Développeur Web - OpenClassrooms ***",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilieGDU/EmilieGendreau_3_29032021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilieGDU/EmilieGendreau_3_29032021/issues"
+  },
+  "homepage": "https://github.com/EmilieGDU/EmilieGendreau_3_29032021#readme"
+}

@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    background-color: #FFFFFF;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 66%;
+        margin-left: 5.5%;
+        padding: 15px 0px 10px 0px;
+    }
+    &__button {
+        border: none;
+        background-color: #FFFFFF;
+        font-size: 1.3rem;
+    }
+    &__logo {
+        text-align: center; /* text-align et padding non présents sur mise en page spécifique des restaurants */
+        padding: 10px 0px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}

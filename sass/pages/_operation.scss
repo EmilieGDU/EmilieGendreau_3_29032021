@@ -1,0 +1,51 @@
+.site-operation {
+    margin-bottom: 70px;
+    &__heading {
+        padding-left: 5%;
+    }
+    &__list {
+        list-style-type: none;
+    }
+    &__list-item {
+        position: relative;
+        background-color: #F6F6F6;
+        border-radius: 15px;
+        @include box-shadow;
+        padding: 28px 20px;
+        width: 90%;
+        height: 75px;
+        margin: 7% 0% 0% 5%;
+        font-size: 0.9rem;
+        font-weight: 500;
+        &--active {
+            background-color:  #F5EDFF;
+        }
+        &__number {
+            position: absolute;
+            left: -2.5%;
+            color: #FFFFFF;
+            border: 1px solid $color-primary;
+            border-radius: 15px;
+            padding: 0px 5px;
+            background-color: $color-primary;
+            font-size: 0.9rem;
+        }
+        &__icon {
+            padding: 0px 15px;
+            font-size: 1rem;
+            font-weight: 400;
+            &.fas {
+                color: $color-primary;
+            }
+            &.fas.fa-mobile-alt, .fas.fa-list-ul {
+                color: #7E7E7E;
+                font-size: 1.1rem;
+            }
+        }
+        &__text {
+            position: absolute;
+            left: 70px;
+            font-size: 1rem;
+        }
+    }
+}
