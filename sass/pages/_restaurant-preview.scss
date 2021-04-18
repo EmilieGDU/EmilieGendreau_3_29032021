@@ -21,9 +21,8 @@
         right: 10px;
         height: 30px;
         width: 21vw;
-        background-color: #99E2D0;
+        @include color-new;
         border-radius: 2.5px;
-        color: #179576;
         text-align: center;
         padding-top: 6px;
         font-size: 0.9rem;

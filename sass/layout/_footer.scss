@@ -1,8 +1,7 @@
 .footer {
     width: 100%;
     /*height: 53vw;*/
-    background-color: $color-footer; /* #353535 */
-    color: #FFFFFF; /* Tenter fonction if lightness < X then color = #FFFFFF */
+    @include color-footer;
     padding-left: 7vw; /* 7% */
     &__logo {
         font-size: 1.15rem;

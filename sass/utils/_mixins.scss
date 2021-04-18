@@ -1,3 +1,19 @@
 @mixin box-shadow ($shadow-size: $box-shadow-size, $color: $color-shadow) {
-    box-shadow: $box-shadow-size $box-shadow-size $box-shadow-size $color;
+    box-shadow: $shadow-size $shadow-size $shadow-size $color;
+}
+
+@mixin color-new ($color: $color-background-new) {
+    background-color: $color;
+    color: darken($color, 40%);
+}
+
+@mixin color-footer ($color: $color-footer) {
+    @if (lightness($color) < 65%) {
+        background-color: $color;
+        color: #FFFFFF;
+    }
+    @else {
+        background-color: $color;
+        color: #000000;
+    }
 }
