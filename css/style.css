@@ -1,15 +1,3 @@
-@charset "UTF-8";
-/* ORDRE D'IMPORT :
-1 - Utils ;
-2 - Vendors ;
-3 - Base ;
-4 - Components ;
-5 - Layout ;
-6 - Pages ;
-7 - Themes 
-*/
-/* Couleurs */
-/* Mesures */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,7 +39,6 @@ body {
 }
 .header__logo {
   text-align: center;
-  /* text-align et padding non présents sur mise en page spécifique des restaurants */
   padding: 10px 0px;
   font-size: 2rem;
   font-weight: 400;
@@ -59,11 +46,9 @@ body {
 
 .footer {
   width: 100%;
-  /*height: 53vw;*/
   background-color: #353535;
   color: #FFFFFF;
   padding-left: 7vw;
-  /* 7% */
 }
 .footer__logo {
   font-size: 1.15rem;
@@ -85,7 +70,6 @@ body {
 .footer__list-item {
   position: relative;
   padding-top: 10px;
-  /* 2.67% */
   font-size: 0.95rem;
 }
 .footer__list-item__icon {
@@ -97,7 +81,6 @@ body {
 .footer__list-item__text {
   position: absolute;
   left: 20px;
-  /* 5.33% */
 }
 
 a {
@@ -113,7 +96,6 @@ a:hover {
   background-color: #EAEAEA;
   box-shadow: 0px 3px 3px #D5D5D5 inset;
   padding: 15px 0px;
-  /*text-align: center;*/
 }
 .restaurant-location__container {
   text-align: center;
@@ -135,7 +117,6 @@ a:hover {
 
 .main-content {
   width: 100vw;
-  /* margin: auto; */
 }
 .main-content__heading {
   padding-top: 50px;
@@ -158,13 +139,6 @@ a:hover {
   width: 215px;
   height: 50px;
   font-size: 0.9rem;
-  /* Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
-  border: none;
-  border-radius: 45px;
-  padding: 10px;
-  color: #FFFFFF;
-  background-color: #DD6EDB;
-  font-weight: 600;*/
 }
 
 .site-operation {
@@ -228,7 +202,6 @@ a:hover {
 }
 
 .restaurant-preview {
-  /* border: 1px solid green; */
   position: relative;
   width: 90%;
   margin: 5% 5% 0% 5%;
@@ -260,7 +233,6 @@ a:hover {
   font-weight: 500;
 }
 .restaurant-preview__description {
-  /* border: 2px solid red; */
   height: 75px;
   display: flex;
   justify-content: space-between;
@@ -312,7 +284,6 @@ a:hover {
 }
 
 .restaurant-menu__article {
-  /* border: 1px solid teal; */
   margin: 10.87% 3.2% 0 3.2%;
 }
 .restaurant-menu__dish-category {
@@ -324,12 +295,11 @@ a:hover {
 .restaurant-menu__separator {
   border: none;
   border-top: 3px solid #99E2D0;
-  width: 10.87%;
+  width: 40px;
   margin-top: 8px;
   margin-left: 1.33%;
 }
 .restaurant-menu__item {
-  /* border: 1px solid orange; */
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
@@ -344,17 +314,14 @@ a:hover {
   padding-left: 10px;
 }
 .restaurant-menu__item__title {
-  /* background-color: lightgreen; */
   font-size: 1rem;
 }
 .restaurant-menu__item__byline {
-  /* background-color: lightsalmon; */
   font-size: 0.9rem;
   font-weight: 300;
   padding-top: 10px;
 }
 .restaurant-menu__item__price {
-  /* background-color: lightslategray; */
   padding-right: 15px;
   font-size: 0.9rem;
   font-weight: bold;
@@ -368,14 +335,6 @@ a:hover {
   height: 50px;
   margin: 13.04% auto 21.74% auto;
   font-size: 0.9rem;
-  /* Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
-  border: none;
-  border-radius: 45px;
-  padding: 10px; // 2.66%
-  color: #FFFFFF;
-  background-color: #DD6EDB;
-  font-weight: 600;
-  */
 }
 
 /*# sourceMappingURL=style.css.map */
