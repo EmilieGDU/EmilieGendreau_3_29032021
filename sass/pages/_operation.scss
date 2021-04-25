@@ -14,11 +14,14 @@
         padding: 28px 20px;
         width: 90%;
         height: 75px;
-        margin: 7% 0% 0% 5%;
+        margin: 7% auto;
         font-size: 0.9rem;
         font-weight: 500;
-        &--active {
-            background-color:  #F5EDFF;
+        &:hover {
+            background-color: lighten($color-primary, 35%);
+            @include box-shadow(10px); 
+            color: adjust-color($color-primary, $blue:100, $alpha:1);
+            cursor: pointer;
         }
         &__number {
             position: absolute;
@@ -34,11 +37,9 @@
             padding: 0px 15px;
             font-size: 1rem;
             font-weight: 400;
-            &.fas {
-                color: $color-primary;
-            }
-            &.fas.fa-mobile-alt, .fas.fa-list-ul {
-                color: #7E7E7E;
+            opacity: 0.5;
+            // color: #7E7E7E;
+            &.fas.fa-mobile-alt {
                 font-size: 1.1rem;
             }
         }
@@ -46,6 +47,7 @@
             position: absolute;
             left: 70px;
             font-size: 1rem;
+            color: #000000;
         }
     }
 }

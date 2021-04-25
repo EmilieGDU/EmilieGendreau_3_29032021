@@ -1,3 +1,20 @@
+/* @mixin mobile-small {
+    @media screen and (min-width: map-get($breakpoints, mobile-small)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: map-get($breakpoints, laptop)) {
+        @content;
+    }
+} */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +45,7 @@ body {
 .header__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 66%;
   margin-left: 5.5%;
   padding: 15px 0px 10px 0px;
@@ -158,12 +176,15 @@ a:hover {
   padding: 28px 20px;
   width: 90%;
   height: 75px;
-  margin: 7% 0% 0% 5%;
+  margin: 7% auto;
   font-size: 0.9rem;
   font-weight: 500;
 }
-.site-operation__list-item--active {
-  background-color: #F5EDFF;
+.site-operation__list-item:hover {
+  background-color: #f2eafb;
+  box-shadow: 10px 10px 10px #E9E9E9;
+  color: #9356ff;
+  cursor: pointer;
 }
 .site-operation__list-item__number {
   position: absolute;
@@ -179,18 +200,16 @@ a:hover {
   padding: 0px 15px;
   font-size: 1rem;
   font-weight: 400;
+  opacity: 0.5;
 }
-.site-operation__list-item__icon.fas {
-  color: #9356DC;
-}
-.site-operation__list-item__icon.fas.fa-mobile-alt, .site-operation__list-item__icon .fas.fa-list-ul {
-  color: #7E7E7E;
+.site-operation__list-item__icon.fas.fa-mobile-alt {
   font-size: 1.1rem;
 }
 .site-operation__list-item__text {
   position: absolute;
   left: 70px;
   font-size: 1rem;
+  color: #000000;
 }
 
 .restaurants {

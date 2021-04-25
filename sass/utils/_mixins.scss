@@ -17,3 +17,28 @@
         color: #000000;
     }
 }
+
+// Responsive
+@mixin responsive($key) {
+    @media screen and (min-width: map-get($breakpoints, $key)) {
+        @content;
+    }
+}
+
+/* @mixin mobile-small {
+    @media screen and (min-width: map-get($breakpoints, mobile-small)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: map-get($breakpoints, laptop)) {
+        @content;
+    }
+} */
