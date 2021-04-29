@@ -8,22 +8,25 @@
         object-fit: cover;
     }
     &__description {
+        // border: 1px solid red;
         position: absolute;
         width: 100%;
         background-color: #FFFFFF;
         bottom: 0;
         border-radius: 30px 30px 0px 0px;
-        &__container {        
+        &__container {  
+            // border: 1px solid blue;      
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            width: 85.87%;
-            font-size: 1.2rem;
+            width: percentage(322/375);
+            font-size: 1.92rem;
             margin: 0 auto 0 4.35%;
             padding: 11.96% 0 0 0;
         }
         &__favorite {
-            font-size: 1.5rem;
+            // border: 1px solid green;
+            font-size: 2.4rem;
         }
     }
 }

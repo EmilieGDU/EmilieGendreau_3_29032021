@@ -6,7 +6,7 @@
     &__dish-category {
         text-transform: uppercase;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding-left: 1.33%;
     }
     &__separator { 
@@ -32,18 +32,18 @@
         }
         &__title {
             // background-color: lightgreen;
-            font-size: 1rem;
+            font-size: 1.6rem;
         }
         &__byline {
             // background-color: lightsalmon;
-            font-size: 0.9rem;
+            font-size: 1.44rem;
             font-weight: 300;
             padding-top: 10px;
         }
         &__price {
             // background-color: lightslategray;
             padding-right: 15px;
-            font-size: 0.9rem;
+            font-size: 1.44rem;
             font-weight: bold;
         }
     }
@@ -55,7 +55,7 @@
         width: 48.91%;
         height: 50px;
         margin: 13.04% auto 21.74% auto;
-        font-size: 0.9rem;
+        font-size: 1.44rem;
         // Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
         // border: none;
         // border-radius: 45px;

@@ -1,10 +1,20 @@
 .site-operation {
     margin-bottom: 70px;
+    @include responsive (tablet) {
+        margin-bottom: 25px;
+    }
     &__heading {
         padding-left: 5%;
+        @include responsive (tablet) {
+            padding-left: 0;
+            text-align: center;
+        }
     }
     &__list {
         list-style-type: none;
+        @include responsive (laptop) {
+            display: flex;
+        }
     }
     &__list-item {
         position: relative;
@@ -15,13 +25,19 @@
         width: 90%;
         height: 75px;
         margin: 7% auto;
-        font-size: 0.9rem;
+        font-size: 1.44rem;
         font-weight: 500;
         &:hover {
             background-color: lighten($color-primary, 35%);
             @include box-shadow(10px); 
             color: adjust-color($color-primary, $blue:100, $alpha:1);
-            cursor: pointer;
+        }
+        @include responsive (tablet) {
+            max-width: 300px;
+            margin: 5% auto;
+        }
+        @include responsive (laptop) {
+            margin: 3% auto;
         }
         &__number {
             position: absolute;
@@ -31,22 +47,22 @@
             border-radius: 15px;
             padding: 0px 5px;
             background-color: $color-primary;
-            font-size: 0.9rem;
+            font-size: 1.44rem;
         }
         &__icon {
             padding: 0px 15px;
-            font-size: 1rem;
+            font-size: 1.6rem;
             font-weight: 400;
             opacity: 0.5;
             // color: #7E7E7E;
             &.fas.fa-mobile-alt {
-                font-size: 1.1rem;
+                font-size: 1.76rem;
             }
         }
         &__text {
             position: absolute;
             left: 70px;
-            font-size: 1rem;
+            font-size: 1.6rem;
             color: #000000;
         }
     }

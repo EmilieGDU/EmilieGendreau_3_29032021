@@ -1,7 +1,16 @@
 .restaurants {
+    // border: 2px solid red;
     background-color: #F2F2F2;
-    padding-bottom: 17vw;
+    padding-bottom: percentage(65/375);
+    @include responsive (tablet) {
+        padding-bottom: 60px;
+    }
     &__heading {
-        padding-left: 5%;
+        // border: 1px solid blue;
+        padding-left: percentage(20/375);
+        @include responsive (tablet) {
+            padding-left: 0;
+            text-align: center;
+        }
     }
 }
