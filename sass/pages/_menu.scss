@@ -1,7 +1,25 @@
 .restaurant-menu {
+    // border: 3px solid red;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
     &__article {
-    // border: 1px solid teal;
+    // border: 3px solid teal;
     margin: 10.87% 3.2% 0 3.2%;
+    @include responsive (tablet) {
+        width: 80%;
+        margin: 10% auto;
+    }
+    @include responsive (tablet-large) {
+        margin: 7.5% auto;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 30%;
+        margin: 5% auto;
+    }
     }
     &__dish-category {
         text-transform: uppercase;
@@ -56,6 +74,16 @@
         height: 50px;
         margin: 13.04% auto 21.74% auto;
         font-size: 1.44rem;
+        @include responsive (tablet) {
+            width: 320px;
+            margin: 12.5% auto 15%;
+        }
+        @include responsive (tablet-large) {
+            margin: 10% auto 12.5%;
+        }
+        @media screen and (min-width: 1200px) {
+            margin: 5% auto 20%;
+        }
         // Créé partiel _button.scss (contenant classe .button_pink) qui devrait ajouter :
         // border: none;
         // border-radius: 45px;

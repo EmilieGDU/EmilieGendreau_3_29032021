@@ -81,6 +81,14 @@ body {
   margin-left: 5.3333333333%;
   padding: 15px 0px 10px 0px;
 }
+@media screen and (min-width: 376px) {
+  .header__container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    justify-content: center;
+  }
+}
 .header__button {
   border: none;
   background-color: #FFFFFF;
@@ -88,12 +96,12 @@ body {
 }
 @media screen and (min-width: 500px) {
   .header__button {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .header__button {
-    font-size: 4.8rem;
+    font-size: 3.12rem;
   }
 }
 .header__logo {
@@ -102,14 +110,19 @@ body {
   font-size: 3.2rem;
   font-weight: 400;
 }
+@media screen and (min-width: 376px) {
+  .header__logo {
+    padding-left: 25px;
+  }
+}
 @media screen and (min-width: 500px) {
   .header__logo {
-    font-size: 4.9rem;
+    font-size: 4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .header__logo {
-    font-size: 7.4rem;
+    font-size: 4.8rem;
   }
 }
 
@@ -195,16 +208,35 @@ a:hover {
   box-shadow: 0px 3px 3px #D5D5D5 inset;
   padding: 15px 0px;
 }
-.restaurant-location__container {
-  text-align: center;
+@media screen and (max-width: 375px) {
+  .restaurant-location__container {
+    text-align: center;
+    margin-left: -6.1333333333%;
+  }
+}
+@media screen and (min-width: 376px) {
+  .restaurant-location__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  .restaurant-location__container {
+    text-align: center;
+  }
 }
 .restaurant-location__icon {
   padding-right: 10px;
   font-size: 1.4rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .restaurant-location__icon {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant-location__icon {
+    font-size: 2.1rem;
   }
 }
 .restaurant-location__input {
@@ -214,10 +246,16 @@ a:hover {
   font-weight: 700;
   font-size: 1.44rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
+  .restaurant-location__input {
+    width: 150px;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
   .restaurant-location__input {
     width: 200px;
-    font-size: 2.1rem;
+    font-size: 2.16rem;
   }
 }
 .restaurant-location__input::placeholder {
@@ -437,10 +475,28 @@ a:hover {
   width: 100%;
   height: 315px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
 .restaurant__image {
   width: 100%;
   height: 280px;
   object-fit: cover;
+}
+@media screen and (min-width: 376px) {
+  .restaurant__image {
+    max-height: 320px;
+    object-position: 0% 70%;
+  }
+}
+@media screen and (min-width: 376px) {
+  .restaurant__image--portrait {
+    max-height: 320px;
+    object-position: 0% 60%;
+  }
 }
 .restaurant__description {
   position: absolute;
@@ -458,12 +514,52 @@ a:hover {
   margin: 0 auto 0 4.35%;
   padding: 11.96% 0 0 0;
 }
+@media screen and (min-width: 376px) {
+  .restaurant__description__container {
+    font-size: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 1.5%;
+    justify-content: space-evenly;
+  }
+}
 .restaurant__description__favorite {
   font-size: 2.4rem;
 }
+@media screen and (min-width: 376px) {
+  .restaurant__description__favorite {
+    font-size: 3.12rem;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+  .restaurant-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 .restaurant-menu__article {
   margin: 10.87% 3.2% 0 3.2%;
+}
+@media screen and (min-width: 500px) {
+  .restaurant-menu__article {
+    width: 80%;
+    margin: 10% auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurant-menu__article {
+    margin: 7.5% auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurant-menu__article {
+    width: 30%;
+    margin: 5% auto;
+  }
 }
 .restaurant-menu__dish-category {
   text-transform: uppercase;
@@ -514,6 +610,22 @@ a:hover {
   height: 50px;
   margin: 13.04% auto 21.74% auto;
   font-size: 1.44rem;
+}
+@media screen and (min-width: 500px) {
+  .restaurant-menu__order {
+    width: 320px;
+    margin: 12.5% auto 15%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurant-menu__order {
+    margin: 10% auto 12.5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurant-menu__order {
+    margin: 5% auto 20%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
