@@ -546,7 +546,7 @@ a:hover {
 }
 @media screen and (min-width: 500px) {
   .restaurant-menu__article {
-    width: 80%;
+    width: 75%;
     margin: 10% auto;
   }
 }

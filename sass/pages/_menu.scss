@@ -10,7 +10,7 @@
     // border: 3px solid teal;
     margin: 10.87% 3.2% 0 3.2%;
     @include responsive (tablet) {
-        width: 80%;
+        width: 75%;
         margin: 10% auto;
     }
     @include responsive (tablet-large) {
