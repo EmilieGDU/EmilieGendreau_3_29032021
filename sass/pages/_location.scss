@@ -3,7 +3,7 @@
     box-shadow: 0px 3px 3px #D5D5D5 inset;
     padding: 15px 0px;
     &__container {
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 376px) {
             text-align: center;
             margin-left: percentage(-23/375);
         }
