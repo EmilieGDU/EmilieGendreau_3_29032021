@@ -4,6 +4,6 @@
     border-radius: 45px;
     padding: 10px;
     color: #FFFFFF;
-    background-color: #DD6EDB;
     font-weight: 600;
+    @include linear-gradient($degree, $color-secondary, $color-primary);
 }

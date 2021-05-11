@@ -1,0 +1,17 @@
+.loading {
+    @include centered-content;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    animation: loading 3000ms linear forwards;
+    &-spinner {
+        width: 100px;
+        height: 100px;
+        border: 7.5px solid $color-shadow;
+        border-radius: 50%;
+        animation: loading-spinner 3000ms linear forwards;
+        // animation: loading-spinner 1000ms linear alternate 3;
+    }
+}

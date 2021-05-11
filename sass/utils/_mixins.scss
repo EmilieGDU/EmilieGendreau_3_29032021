@@ -1,10 +1,23 @@
+@mixin centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin linear-gradient ($degree, $from, $to) {
+    // Couleur de secours pour les anciens navigateurs
+    background-color: $to;
+    // Dégradé linéaire pour les navigateurs récents
+    background: linear-gradient($degree, $from, $to);
+}
+
 @mixin box-shadow ($shadow-size: $box-shadow-size, $color: $color-shadow) {
     box-shadow: $shadow-size $shadow-size $shadow-size $color;
 }
 
-@mixin color-new ($color: $color-background-new) {
-    background-color: $color;
-    color: darken($color, 40%);
+@mixin color-new ($color-background-new: $color-tertiary) {
+    background-color: $color-background-new;
+    color: darken($color-background-new, 40%);
 }
 
 @mixin color-footer ($color: $color-footer) {

@@ -1,5 +1,5 @@
 .restaurant-menu {
-    // border: 3px solid red;
+    //border: 3px solid red;
     @media screen and (min-width: 1200px) {
         display: flex;
         justify-content: space-evenly;
@@ -7,7 +7,7 @@
         flex-wrap: wrap;
     }
     &__article {
-    // border: 3px solid teal;
+    //border: 3px solid teal;
     margin: 10.87% 3.2% 0 3.2%;
     @include responsive (tablet) {
         width: 75%;
@@ -29,40 +29,103 @@
     }
     &__separator { 
         border: none;   
-        border-top: 3px solid #99E2D0;
+        border-top: 3px solid $color-tertiary;
         width: 40px; // 10.87%
         margin-top: 8px;
         margin-left: 1.33%;
     }
     &__item {
-        // border: 1px solid orange;
+        //border: 1px solid orange;
         background-color: #FFFFFF;
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: flex-end;
+        flex-wrap: nowrap;
+        overflow: hidden;
         border-radius: 10px;
         margin-top: 4%;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        //padding-top: 15px;
+        //padding-bottom: 15px;
         box-shadow: 2.5px 5px 7.5px #909090;
+        &:hover {
+            & > div:first-child {
+                //border: 1px solid blue;
+                width: 20%; 
+                max-width: 75px;
+                span {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &--flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: nowrap;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
         &__description {
             padding-left: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &__title {
             // background-color: lightgreen;
             font-size: 1.6rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &__byline {
             // background-color: lightsalmon;
             font-size: 1.44rem;
             font-weight: 300;
             padding-top: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &__price {
             // background-color: lightslategray;
             padding-right: 15px;
+            padding-left: 50px;
             font-size: 1.44rem;
             font-weight: bold;
+        }
+        &--moving-left {
+            //border: 1px solid green;
+            width: 0;
+            padding: 28.5px 0px;
+            overflow: hidden;
+            background-color: $color-tertiary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: right;            
+            transition: width 750ms ease-in-out;
+            span {
+                //border: 2px solid yellow;
+                display: block;
+                color: $color-tertiary;
+                font-weight: bold;                
+                transform: rotate(0deg);
+                transition: transform 750ms ease-in-out;
+                i {
+                    //border: 1px solid red;
+                    display: block;
+                    font-size: 2rem;
+                    color: #FFF;
+                    //background: #FFF;
+                    //background-clip: text;
+                }
+            }
         }
     }
     &__order {

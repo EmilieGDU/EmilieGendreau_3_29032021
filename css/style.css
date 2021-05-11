@@ -15,6 +15,78 @@
         @content;
     }
 } */
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  0%, 99% {
+    z-index: 1;
+  }
+  90% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@keyframes loading-spinner {
+  0% {
+    transform: rotate(0deg) scale(0.85);
+    border-top-color: #782cd3;
+    border-bottom-color: #782cd3;
+  }
+  16% {
+    transform: rotate(180deg) scale(1);
+  }
+  33% {
+    transform: rotate(360deg) scale(0.85);
+    border-top-color: #ff46cc;
+    border-bottom-color: #ff46cc;
+  }
+  49% {
+    transform: rotate(180deg) scale(1);
+  }
+  66% {
+    transform: rotate(0deg) scale(0.85);
+    border-top-color: #71d7be;
+    border-bottom-color: #71d7be;
+  }
+  82% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.85);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+    opacity: 0;
+    display: none;
+  }
+}
+/*@keyframes loading-spinner {
+    0% {
+        transform: rotate(0deg) scale(0.85);
+        border-top-color: $color-primary;
+        border-bottom-color: $color-primary;
+    }
+    33% {
+        border-top-color: $color-secondary;
+        border-bottom-color: $color-secondary;
+    }
+    50% {
+        transform: rotate(360deg) scale(1);
+    }
+    66% {
+        border-top-color: $color-tertiary;
+        border-bottom-color: $color-tertiary;
+    }
+    100% {
+        transform: rotate(720deg) scale(0.85);
+        border-top-color: $color-primary;
+        border-bottom-color: $color-primary;
+    }
+}*/
 html {
   font-size: 62.5%;
 }
@@ -65,8 +137,9 @@ body {
   border-radius: 45px;
   padding: 10px;
   color: #FFFFFF;
-  background-color: #DD6EDB;
   font-weight: 600;
+  background-color: #9356DC;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
 }
 
 .header {
@@ -201,6 +274,25 @@ a {
 }
 a:hover {
   cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  animation: loading 3000ms linear forwards;
+}
+.loading-spinner {
+  width: 100px;
+  height: 100px;
+  border: 7.5px solid #E9E9E9;
+  border-radius: 50%;
+  animation: loading-spinner 3000ms linear forwards;
 }
 
 .restaurant-location {
@@ -585,29 +677,82 @@ a:hover {
 .restaurant-menu__item {
   background-color: #FFFFFF;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: nowrap;
+  overflow: hidden;
   border-radius: 10px;
   margin-top: 4%;
+  box-shadow: 2.5px 5px 7.5px #909090;
+}
+.restaurant-menu__item:hover > div:first-child {
+  width: 20%;
+  max-width: 75px;
+}
+.restaurant-menu__item:hover > div:first-child span {
+  transform: rotate(360deg);
+}
+.restaurant-menu__item--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  box-shadow: 2.5px 5px 7.5px #909090;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant-menu__item__description {
   padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant-menu__item__title {
   font-size: 1.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant-menu__item__byline {
   font-size: 1.44rem;
   font-weight: 300;
   padding-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant-menu__item__price {
   padding-right: 15px;
+  padding-left: 50px;
   font-size: 1.44rem;
   font-weight: bold;
+}
+.restaurant-menu__item--moving-left {
+  width: 0;
+  padding: 28.5px 0px;
+  overflow: hidden;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  transition: width 750ms ease-in-out;
+}
+.restaurant-menu__item--moving-left span {
+  display: block;
+  color: #99E2D0;
+  font-weight: bold;
+  transform: rotate(0deg);
+  transition: transform 750ms ease-in-out;
+}
+.restaurant-menu__item--moving-left span i {
+  display: block;
+  font-size: 2rem;
+  color: #FFF;
 }
 .restaurant-menu__order {
   display: flex;
