@@ -480,9 +480,17 @@ a:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.container a {
+  display: block;
+  min-width: 335px;
+}
+@media screen and (min-width: 320px) and (max-width: 499px) {
+  .container a {
+    width: 100%;
+  }
+}
 
 .restaurant-preview {
-  display: inline-block;
   position: relative;
   background-color: #FFFFFF;
   width: 89.3333333333%;
@@ -556,10 +564,11 @@ a:hover {
 }
 .restaurant-preview__favorite > .top {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 300ms;
 }
 .restaurant-preview__favorite > .top:hover {
   cursor: pointer;
@@ -635,6 +644,11 @@ a:hover {
   right: 20px;
   font-size: 2.4rem;
 }
+@media screen and (min-width: 376px) {
+  .restaurant__description__favorite {
+    right: 0px;
+  }
+}
 @media screen and (min-width: 500px) {
   .restaurant__description__favorite {
     font-size: 3.12rem;
@@ -644,10 +658,11 @@ a:hover {
   display: inline-block;
   color: #FF79DA;
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 300ms;
 }
 .restaurant__description__favorite .top:hover {
   cursor: pointer;
