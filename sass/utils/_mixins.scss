@@ -4,11 +4,27 @@
     align-items: center;
 }
 
+@mixin pseudo-element {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 @mixin linear-gradient ($degree, $from, $to) {
     // Couleur de secours pour les anciens navigateurs
     background-color: $to;
     // Dégradé linéaire pour les navigateurs récents
     background: linear-gradient($degree, $from, $to);
+}
+
+@mixin linear-gradient-lighten ($degree, $from, $to) {
+    // Couleur de secours pour les anciens navigateurs
+    background-color: lighten($to, 5%);
+    // Dégradé linéaire pour les navigateurs récents
+    background: linear-gradient($degree, lighten($from, 5%), lighten($to, 5%));
 }
 
 @mixin box-shadow ($shadow-size: $box-shadow-size, $color: $color-shadow) {

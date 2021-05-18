@@ -5,5 +5,13 @@
     padding: 10px;
     color: #FFFFFF;
     font-weight: 600;
+    @include box-shadow;
     @include linear-gradient($degree, $color-secondary, $color-primary);
+    //transform: opacity(1);
+    //transition: transform 250ms;
+    &:hover {
+        @include linear-gradient-lighten($degree, $color-secondary, $color-primary);
+        //transform: opacity(0.25);
+        box-shadow: 2.5px 5px 7.5px #909090;
+    }
 }

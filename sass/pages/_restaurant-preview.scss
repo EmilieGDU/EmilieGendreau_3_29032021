@@ -2,10 +2,15 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    // a {
+    //     display: inline-block;
+    //     width: percentage(335/375);
+    // }
 }
 
 .restaurant-preview {
-    // border: 1px solid green;
+    //border: 1px solid green;
+    display: inline-block;
     position: relative;
     background-color: #FFFFFF;
     width: percentage(335/375);
@@ -68,6 +73,19 @@
     }
     &__favorite {
         font-size: 2.4rem;
-        font-weight: 100;
+        position: relative;
+        left: 20px;
+        & > .top {
+            //color: $color-secondary;
+            background: -webkit-linear-gradient(45deg, $color-secondary, $color-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity 250ms; 
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
     }
 }

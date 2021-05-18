@@ -21,12 +21,12 @@
         margin: 0;
         list-style-type: none;
         padding-bottom: 30px;
-        &--with-icon {
-            font-weight: 400;
-        }
-        &--without-icon {
-            font-weight: 300;
-        }
+        // &--with-icon {
+        //     font-weight: 400;
+        // }
+        // &--without-icon {
+        //     font-weight: 300;
+        // }
         @include responsive (tablet) {
             text-align: center;
         }
@@ -40,15 +40,15 @@
         // position: relative;
         padding-top: 10px; // 2.67%
         font-size: 1.5rem;
-        &__icon {
-            font-size: 1.3rem;
-            &.fa-utensils {
-                padding-right: 3px;;
-            } 
-            &.fa-hands-helping {
-                font-size: 1.05rem;
-            } 
-        }
+        // &__icon {
+        //     font-size: 1.3rem;
+        //     &.fa-utensils {
+        //         padding-right: 3px;;
+        //     } 
+        //     &.fa-hands-helping {
+        //         font-size: 1.05rem;
+        //     } 
+        // }
         &__text {
             // position: absolute;
             padding-left: 10px; // 5.33%
