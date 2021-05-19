@@ -558,7 +558,7 @@ a:hover {
   font-weight: 300;
 }
 .restaurant-preview__favorite {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   position: relative;
   left: 20px;
 }
@@ -568,11 +568,14 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 250ms;
 }
 .restaurant-preview__favorite > .top:hover {
   cursor: pointer;
   opacity: 1;
+}
+.restaurant-preview__favorite > .bottom {
+  font-size: 2.4rem;
 }
 
 .restaurant {
@@ -631,18 +634,18 @@ a:hover {
   }
 }
 .restaurant__description__heading {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 1.9em;
 }
 @media screen and (min-width: 500px) {
   .restaurant__description__heading {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 .restaurant__description__favorite {
   position: relative;
   right: 20px;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 @media screen and (min-width: 376px) {
   .restaurant__description__favorite {
@@ -651,10 +654,10 @@ a:hover {
 }
 @media screen and (min-width: 500px) {
   .restaurant__description__favorite {
-    font-size: 3.12rem;
+    font-size: 3.4rem;
   }
 }
-.restaurant__description__favorite .top {
+.restaurant__description__favorite > .top {
   display: inline-block;
   color: #FF79DA;
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
@@ -662,11 +665,19 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 250ms;
 }
-.restaurant__description__favorite .top:hover {
+.restaurant__description__favorite > .top:hover {
   cursor: pointer;
   opacity: 1;
+}
+.restaurant__description__favorite > .bottom {
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 500px) {
+  .restaurant__description__favorite > .bottom {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
