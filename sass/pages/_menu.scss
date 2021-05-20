@@ -48,6 +48,12 @@
         //padding-top: 15px;
         //padding-bottom: 15px;
         box-shadow: 2.5px 5px 7.5px #909090;
+        animation: appear 2000ms ease-in-out backwards;
+        @for $i from 1 through 4 {
+            &--#{$i} {
+            animation-delay: 500ms * $i;
+        }
+    }
         &:hover {
             & > div:first-child {
                 //border: 1px solid blue;

@@ -21,6 +21,12 @@
     margin: 5% 5% 0% 5%;
     border-radius: 15px;
     @include box-shadow;
+    animation: appear 2000ms ease-in-out backwards;
+    @for $i from 1 through 4 {
+        &--#{$i} {
+            animation-delay: 500ms * $i;
+        }
+    }
     @include responsive (tablet) {
         max-width: 400px;
     }
@@ -88,7 +94,7 @@
         }
         .bottom {
             opacity: 1;
-            transition: opacity 250ms;
+            transition: opacity 300ms ease-in-out;
         }
         .top {
             background: -webkit-linear-gradient(45deg, $color-secondary, $color-primary);
@@ -96,7 +102,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
-            transition: opacity 250ms;
+            transition: opacity 300ms ease-in-out;
         }
     }
 }

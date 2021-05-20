@@ -64,6 +64,16 @@
     display: none;
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 /*@keyframes loading-spinner {
     0% {
         transform: rotate(0deg) scale(0.85);
@@ -497,6 +507,19 @@ a:hover {
   margin: 5% 5% 0% 5%;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #E9E9E9;
+  animation: appear 2000ms ease-in-out backwards;
+}
+.restaurant-preview--1 {
+  animation-delay: 500ms;
+}
+.restaurant-preview--2 {
+  animation-delay: 1000ms;
+}
+.restaurant-preview--3 {
+  animation-delay: 1500ms;
+}
+.restaurant-preview--4 {
+  animation-delay: 2000ms;
 }
 @media screen and (min-width: 500px) {
   .restaurant-preview {
@@ -573,7 +596,7 @@ a:hover {
 }
 .restaurant-preview__favorite .bottom {
   opacity: 1;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 .restaurant-preview__favorite .top {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
@@ -581,7 +604,7 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 
 .restaurant {
@@ -674,7 +697,7 @@ a:hover {
 }
 .restaurant__description__favorite > .bottom {
   opacity: 1;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 .restaurant__description__favorite > .top {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
@@ -682,7 +705,7 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
@@ -737,6 +760,19 @@ a:hover {
   border-radius: 10px;
   margin-top: 4%;
   box-shadow: 2.5px 5px 7.5px #909090;
+  animation: appear 2000ms ease-in-out backwards;
+}
+.restaurant-menu__item--1 {
+  animation-delay: 500ms;
+}
+.restaurant-menu__item--2 {
+  animation-delay: 1000ms;
+}
+.restaurant-menu__item--3 {
+  animation-delay: 1500ms;
+}
+.restaurant-menu__item--4 {
+  animation-delay: 2000ms;
 }
 .restaurant-menu__item:hover > div:first-child {
   width: 20%;

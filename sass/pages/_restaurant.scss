@@ -79,7 +79,7 @@
             }
             & > .bottom {
                 opacity: 1;
-                transition: opacity 250ms;
+                transition: opacity 300ms ease-in-out;
             }
             & > .top {
                 background: -webkit-linear-gradient(45deg, $color-secondary, $color-primary);
@@ -87,7 +87,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 0;
-                transition: opacity 250ms;
+                transition: opacity 300ms ease-in-out;
             }
         }
     }
