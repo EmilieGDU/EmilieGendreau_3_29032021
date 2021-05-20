@@ -674,11 +674,11 @@ a:hover {
 .restaurant__description__favorite {
   font-size: 2.4rem;
   position: relative;
-  right: 20px;
+  right: 0px;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 335px) and (max-width: 376px) {
   .restaurant__description__favorite {
-    right: 0px;
+    right: 20px;
   }
 }
 @media screen and (min-width: 500px) {
