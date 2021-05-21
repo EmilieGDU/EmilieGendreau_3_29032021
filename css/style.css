@@ -444,7 +444,6 @@ a:hover {
   position: absolute;
   left: -2.5%;
   color: #FFFFFF;
-  border: 1px solid #9356DC;
   border-radius: 15px;
   padding: 0px 5px;
   background-color: #9356DC;
@@ -600,7 +599,6 @@ a:hover {
 }
 .restaurant-preview__favorite .top {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -701,7 +699,6 @@ a:hover {
 }
 .restaurant__description__favorite > .top {
   background: -webkit-linear-gradient(45deg, #FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;

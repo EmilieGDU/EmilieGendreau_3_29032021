@@ -83,7 +83,6 @@
             }
             & > .top {
                 background: -webkit-linear-gradient(45deg, $color-secondary, $color-primary);
-                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 0;
