@@ -34,8 +34,8 @@
         margin-top: 8px;
         margin-left: 1.33%;
     }
-    &__item {
-        //border: 1px solid orange;
+    &__item { 
+        //border: 1px solid orange;       
         background-color: #FFFFFF;
         display: flex;
         flex-direction: row-reverse;
@@ -43,10 +43,10 @@
         align-items: flex-end;
         flex-wrap: nowrap;
         overflow: hidden;
-        border-radius: 10px;
-        margin-top: 4%;
+        border-radius: 10px;        
         //padding-top: 15px;
         //padding-bottom: 15px;
+        margin-top: 4%;
         box-shadow: 2.5px 5px 7.5px #909090;
         animation: appear 1000ms ease-in-out backwards;
         @for $i from 1 through 4 {
@@ -106,7 +106,6 @@
             font-weight: bold;
         }
         &--moving-left {
-            //border: 1px solid green;
             width: 0;
             padding: 28.5px 0px;
             overflow: hidden;
@@ -117,14 +116,12 @@
             transform-origin: right;            
             transition: width 750ms ease-in-out;
             span {
-                //border: 2px solid yellow;
                 display: block;
                 color: $color-tertiary;
                 font-weight: bold;                
                 transform: rotate(0deg);
                 transition: transform 750ms ease-in-out;
                 i {
-                    //border: 1px solid red;
                     display: block;
                     font-size: 2rem;
                     color: #FFF;
