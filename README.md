@@ -8,8 +8,8 @@ Ohmyfood! est une jeune startup qui souhaiterait s'imposer sur le marché de la 
 Dans un premier temps, le site contiendra 4 menus, et on me confie la tâche de construire le site 100% mobile.
 
 ### Identité graphique ###
-*Polices* : Shrikhand (logos et titres) + Roboto (texte)
-*Couleurs* : #9356DC (primaire), #FF79DA (secondaire), #99E2D0 (tertiaire).
+- *Polices* : Shrikhand (logos et titres) + Roboto (texte)
+- *Couleurs* : #9356DC (primaire), #FF79DA (secondaire), #99E2D0 (tertiaire).
 
 ### Technologies ###
 Le développement doit se faire en **CSS, sans JavaScript**.
